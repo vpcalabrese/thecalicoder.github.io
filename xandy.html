@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>What is xy? For Mara </title>
+  </head>
+  <body>
+  
+  	<p>if x^2 + xy = 20 <br> and y^2 + xy = 30 <br> what is xy? </p>
+  	<p id="answer"></p>
+  	
+  	<script>
+  		/*
+  			if		x^2+xy = 20
+  			and		y^2+xy = 30
+  			what is xy?
+  		*/
+  		var answer = document.getElementById("answer");
+  		
+  		for(var x = 0; x < 20; x+=0.1){
+  			for(var y = 0; y < 20; y+=0.1){
+  				var xy = x*y;
+  				var xsquared = Math.pow(x, 2); 
+  				var ysquared = Math.pow(y, 2);
+  				
+  				if(xy == 12 && xsquared + xy == 20){
+  					answer.innerHTML = x + " * " + y;
+  					break;
+  				}
+  			}
+  		}
+  		
+  	</script>
+  </body>
+</html>

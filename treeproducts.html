@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tree products (Mrs. Wright, 2015)</title>
+<style>
+	body{
+		margin: 6%;
+		font-family: 'PT Mono', monospace;
+		background: whitesmoke;
+	}
+	figure{
+		margin: 3%;
+	}
+	img{
+		border: 1px dashed gray;
+		background: white;
+	}
+	#home{
+		display: inline-block;
+		margin-top: 6%
+	}
+	#answer{
+		border: 1px dashed red;
+	}
+</style>
+</head>
+
+<body onload="loadScript()">
+	<h2>Solving "Tree Products" with for loops</h2>
+	<br><p>Mrs. Wright, seventh grade math teacher, I suppose gave the class this problem for the holidays: </p>
+	<figure><img src="http://i.imgur.com/W5tU9wf.png" width="50%"><figcaption><i>Figure 1</i>, problem</figcaption></figure>
+	<p>Now I did know about programming, or rather coding, then, but I haven't gotten to this problem until now. The results and answers are below.</p>
+	<p>The numbers in order, <i>top-down and left-to-right</i>, are as follows: <strong><span id="answer"></span></strong></p>
+	<p>Which is correct! See figure 2. <br> To see the code, press (for Mac) <strong>COMMAND-OPTION-I</strong> or (for PC) <strong>CTRL-OPTION-I</strong> and the code should show in the defaulted tab called "elements". The script tag contains the mini "algorithm".</p>
+	<figure><img src="http://www2.stetson.edu/~efriedma/puzzle/holiday/2008/2sol.gif" width="20%"><figcaption><i>Figure 2</i>, correct answers.</figcaption></figure>
+	<a id="home" href="https://thecalicoder.github.io">Home</a>
+	
+	<script>
+		
+		/*
+			(440)  a    =   (2)  b   *   (3) c
+			(70)   b    =   (2)  d   *   (2) e
+			(200)  c    =   (2)  b   *   (2) d
+			(30)   d    =   (3)  a
+			(10)   e    =   (2)  d
+			
+			digit0 * 100   +   digit1 * 10  +  digit2  =  a
+			digit3 * 10  +  digit4                     =  b
+			digit5 * 100  +  digit6 * 10  +  digit7    =  c
+			digit8 * 10  +  digit9                     =  d
+			digit10 * 10                               =  e
+			
+			-------------------------------------------------
+			d0 * 100 + d1 * 10 + d2  = d3 * d4 * d5 * d6 * d7
+			d3 * 10 + d4             = d8 * d9 * d10
+			d5 * 100 + d6 * 10 + d7  = d3 * d4 * d8 * d9
+			d8 * 10 + d9             = d0 * d1 * d2
+			d10                      = d8 * d9
+			-------------------------------------------------
+			
+			11 variables for 11 total digits, 5 numbers
+			
+		*/
+		function loadScript(){
+			//first number, a
+			//first digit, 100th place
+			for(var d0 = 0; d0 < 5; d0++){
+				//second digit, 10th place
+				for(var d1 = 0; d1 < 4; d1++){
+					//third digit, 1th place
+					for(var d2 = 0; d2 < 10; d2++){
+				
+						//second number, b
+						//first digit, 10th place
+						for(var d3 = 0; d3 < 7; d3++){
+							//second digit, 1th place 
+							for(var d4 = 0; d4 < 10; d4++){
+							
+								//third number, c
+								//first digit, 100th place
+								for(var d5 = 0; d5 < 2; d5++){
+									//second digit, 10th place
+									for(var d6 = 0; d6 < 10; d6++){
+										//third digit, 1th place
+										for(var d7 = 0; d7 < 10; d7++){
+										
+										
+										   //fourth number, d
+										   //first digit, 10th place
+										   for(var d8 = 0; d8 < 3; d8++){
+																																					      //second digit, 1th place
+																																					   	for(var d9 = 0; d9 < 10; d9++){
+																																					   
+																																					   		//fifth number, e
+																																					   		//first digit, 1th place
+																																					   		for(var d10 = 0; d10 < 10; d10++){
+																																					   		
+																																					   			//calculate for correct combination
+																																					   			if(d0*100+d1*10+d2 == d3*d4*d5*d6*d7 && d3*10+d4 == d8*d9*d10 && d5*100+d6*10+d7 == d3*d4*d8*d9 && d8*10+d9 == d0*d1*d2 && d10 == d8*d9){
+																																					   				   document.getElementById("answer").innerHTML = d0*100+d1*10+d2 + ", " + (d3*10+d4) + ", " + (d5*100+d6*10+d7) + ", " + (d8*10+d9) + ", " + d10;
+																																					   			
+																																					   			   //console.log(d0*100+d1*10+d2 + ", " + (d3*10+d4) + ", " + (d5*100+d6*10+d7) + ", " + (d8*10+d9) + ", " + d10); 
+																																					   			   //js has this wierd thing where if I don't put () around the d3*10+d4, for example, when there are quotes like ", " then instead of showing 64, 604 will show (makes sense, "60"+"4" = 604). 
+																																					   			}
+																																					   		}
+																																					   	}																		
+												   }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
