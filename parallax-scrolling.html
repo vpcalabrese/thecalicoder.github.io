@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Parallax Scrolling</title>
+	<style>
+		html, body{
+			height: 100%;
+		}
+		.parallax{
+			background-image: url('http://cdn.history.com/sites/2/2013/11/Battlle-of-Chickamauga-Hero-H.jpeg');
+			
+			height: 100%;
+			
+			background-attachment: fixed; 
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		@media only screen and (max-device-width: 1024px) {
+    		.parallax {
+				background-attachment: scroll;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Parallax scrolling: The Civil War</h1>
+	<div class="parallax"></div>
+	<div style="min-height: 900px; background-color: lightgray;">
+		<p>Lorem ipsum dolor sit amet, facere nunc amet, malesuada dictum ipsum sit volutpat justo accumsan, euismod nullam. Eleifend etiam a eleifend libero pulvinar. Praesent sit commodo at duis quis, enim viverra imperdiet posuere, tellus mauris velit, tellus in sit tortor augue ac. Mi primis ultrices ipsum, sollicitudin eget eu elit nullam vulputate augue. Phasellus eu, ipsum mi quis enim, mattis et sit malesuada. Mauris possimus est pede quia.</p>
+	</div>
+	
+<div class="parallax"></div>
+</body>
+</html>

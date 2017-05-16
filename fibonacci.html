@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fibonacci Sequence</title>
+<style>
+	#largest{
+		color: gray;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<h1>Fibonacci Numbers</h1>
+	<h2>All the way up to and beyond <span id="largest">the 1111th place (hover to see what that is)</span></h2>
+	
+	<script>
+		/*
+			recursion
+			input 0 and 1 into function
+			takes and adds
+			calls itself again and inputs 1 and sum
+				input 1 and 1
+				takes and adds
+				calls itself again and inputs 1 and sum
+					input 1 and 2
+					calls itself again and inputs 2 and sum
+					
+			1. read 2 arguments and store in a (new) and b (old)
+			2. assign b to a and assign sum to b 
+			3. call function and pass in a, b as arguments
+			4. repeat until b is certain size
+			
+		*/
+		/*
+		function fibonacci(a, b, place){
+			var c = a+b;
+			a = b;
+			b = c;
+			place++;
+		
+			if(b<Math.pow(10, 303)){	
+				//console.log(b); //put this after the next line and reverse the order of the sequence
+				fibonacci(a, b, place);
+			}
+		}
+		*/
+		var i = 0; 
+		var a = 0, b = 1, c; 
+		function loop(){
+			setTimeout(function(){
+				c = a+b;
+				a = b; 
+				b = c; 
+				$("#largest").html(b);
+				i++;
+				if(i<1111){
+					loop();
+				}
+			}, 0); 
+		}
+		$("#largest").hover(function(){ loop(); });
+	</script>
+</body>
+</html>
