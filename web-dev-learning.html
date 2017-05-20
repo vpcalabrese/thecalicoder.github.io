@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Learning web development – Guide</title>
+	<style>
+		body{
+			margin: 0;
+			min-height: 150vh;
+		}
+		#modern-text{
+			background: url('https://thecalicoder.github.io/images/manhattan.jpg');
+			color: white;
+			font-family: sans-serif;
+			font-size: 48px;
+			text-align: center;
+			letter-spacing: 5px;
+			font-weight: bold;
+			
+			padding: 3vw;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		@media only screen and (max-device-width: 1024px){
+    		#modern-test{
+				background-attachment: scroll;
+			}
+		}
+		.marginalize{
+			margin: 3vh 3vw 3vh 3vw;
+			padding-right: 30vmin;
+		}
+		form fieldset > *{
+			display: block;
+			padding: 1vmin;
+		}
+		code{
+			background-color: lightgray;
+			padding: 2px;
+		}
+		p{
+			line-height: 3vmin;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="marginalize">
+	<!--The first few elements are stripped from all style because your first html won't really implement css-->
+	<h1 style="all: initial; font-size: 2em; font-weight: bold; display: block; margin: 0.83em 0 0.83em 0;">Heading</h1>
+	<h2 style="all: initial; font-size: 1.5em; font-weight: bold; display: block; margin: 0.67em 0 0.67em 0;">Sub heading</h2>
+	<p>This webpage visualizes what you will learn, going into web development and html, in order as taught by sources like w3schools and freecodecamp, really any good web dev course online that teaches in order from beginner code to advanced programming, in a timeline fashion. <br>As you scroll down, the code will become more advanced and more concepts will be implemented with html, css, javascript, and maybe even php OR<sup>1</sup> ajax.<br><br><sup>1</sup> "OR" electronically meaning one of either or both, as you may see ajax and php scripting in a website. Err... electronics joke... </p>
+	<!--html comment passing by... (YT joke)-->
+	<p style="color:red; font-style:italic; text-shadow:-2px 2px black; font-size: 18px;">Text in style is style</p>
+	<p style="font-size: 2vmin; font-weight: bold; padding: 3vmax"><em>Note 1:</em> vw and vh are my new favorite units (resize your browser window)<p>
+	</div>
+	
+	<div id="modern-text"><p>Modern</p></div>
+	<div class="marginalize">
+		<p style="border: 2px solid gray; border-radius: 45%; display: inline-block; padding: 4px;">Circle this with a border</p>
+		<ol>
+			<li><a href="#" style="display: block;">guess which link works</a></li>
+			<li><a href="#" style="display: block;">guess which link works</a></li>
+		</ol>
+		<input type="text" placeholder="Text input">
+		<form action="#" style="margin: 1vmin;">
+			<fieldset>
+				<legend>This form has no action</legend>
+				Username
+				<input type="text" placeholder="input not required">
+				Password
+				<input type="text" required placeholder="input required">
+				<label><input type="radio" name="first-question">The statement below is false</label>
+				<label><input type="radio" name="first-question">The statement above is true</label>
+				<button type="submit">Submit form button</button>
+			</fieldset>
+		</form>
+		
+		<p><em>Note 2:</em> I just tested and learned that a url that goes <code>url('images/manhattan.jpg')</code> will link to an image, <code>manhattan.jpg</code>, only if the parent directory, <code>images/</code>, is within the same directory as the file or webpage linking it.<br>Prepending a slash like so <code>url('/images/manhattan.jpg')</code> means it doesn't matter what directory the current file is in, the slash "roots the path" of the url, or means it is a shortened form of <code>url('https://thecalicoder.github.io/images/manhattan.jpg</code>.<br><br><em>Note 3:</em> Because Github requires a local file to clone, something like <code>/images/</code> would refer to <code>file:///images</code> (which is the same as saying <code>file://users/images</code>), meaning that the file I'm linking to wouldn't be seen and I'd have to sync the website to see the results. That is why I usually type the absolute url. Get used to typing, get faster.</p> 
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
