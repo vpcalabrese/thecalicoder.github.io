@@ -7,54 +7,62 @@
 		/** big elements of page
 		----------------------------------------------------------------------------------------------------------*/
 		body{
-			background: url("https://thecalicoder.github.io/images/computer.jpg");
-			background-repeat: no-repeat;
-			background-position: 50% 30%;
-			background-attachment: fixed;
+			background: url("images/offices.jpg") no-repeat fixed center;
+			background-size: cover;
 			margin: 0;
-			padding: 0 6% 0 6%;
-			font-family: "PT Mono", monospace;
+			font-family: "Open Sans", sans-serif;
 		}
 		aside{
+			background: rgba(0, 0, 0, 0.5);
 			float: left;
-			width: 50%;
+			width: 20%;
+			height: 100vh;
+			overflow: scroll;
 		}
 		main{
 			float: right;
-			width: 50%;
+			width: 80%;
+			height: 100vh;
 		}
 		main + *{
 			clear: both;
 		}
+		/** general elements
+		----------------------------------------------------------------------------------------------------------*/
+		h1, h2, h2{
+			font-family: 'Roboto', sans-serif;
+			text-align: center;
+		}
 		/** elements in aside
 		----------------------------------------------------------------------------------------------------------*/
 		#site-title{
-			font-family: 'Forum', cursive;
 			color: white;
 			font-size: 48px;
 			margin-bottom: 0.5em;
 		}	
 		#site-description{
-			color: lightslategray;
+			color: #999;
+			margin: 0 3vmin 0 3vmin;
 		}
 		/** elements in main
 		----------------------------------------------------------------------------------------------------------*/
-		#orange-block{
-			background: lightgray;
-			position: fixed;
-			
+		#programs{
+			background: rgba(255, 255, 255, 0.75);
+			margin: 6vmin;
+			padding: 3vmin;
 		}
-		#orange-block a{
+		#programs a{
 			text-decoration: none;
-			color: darkslategray;
+			color: #444;
 			display: block;
 			line-height: 3vmax;
+			font-weight: 900;
 		}
 		.dates{
-			color: black;
+			color: gray;
 		}
 	</style>
-	<link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 </head>
 
 <body>
@@ -63,7 +71,7 @@
 		<h3 id="site-description"><i>Roman Mirov's programming portfolio and web log.</i></h3>
 	</aside>
 	<main>
-		<article id="orange-block">
+		<article id="programs">
 			<a href="https://thecalicoder.github.io/treeproducts">Solving "Tree Products," number sequence problem with for loops <span class="dates">— 8 May 2017 (1:59a)</span></a>
 			<a href="https://thecalicoder.github.io/learning-web-dev">Web development learning sequence, scroll to see the code become more advanced <span class="dates">— updated May 2017</span></a>
 		</article>
