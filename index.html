@@ -4,27 +4,45 @@
 	<meta charset="UTF-8">
 	<title>caliCoder::Roman Mirov::computer programmer and engineer</title>
 	<style>
+		/** big elements of page
+		----------------------------------------------------------------------------------------------------------*/
 		body{
 			background: url("https://thecalicoder.github.io/images/computer.jpg");
+			background-repeat: no-repeat;
+			background-position: 50% 30%;
+			background-attachment: fixed;
 			margin: 0;
 			padding: 0 6% 0 6%;
 			font-family: "PT Mono", monospace;
 		}
-		h1{
+		aside{
+			float: left;
+			width: 50%;
+		}
+		main{
+			float: right;
+			width: 50%;
+		}
+		main + *{
+			clear: both;
+		}
+		/** elements in aside
+		----------------------------------------------------------------------------------------------------------*/
+		#site-title{
 			font-family: 'Forum', cursive;
-			color: orange;
+			color: white;
 			font-size: 48px;
-			margin-bottom: 1%;
+			margin-bottom: 0.5em;
 		}	
-		h3{
+		#site-description{
 			color: lightslategray;
 		}
+		/** elements in main
+		----------------------------------------------------------------------------------------------------------*/
 		#orange-block{
-			background: darkorange;
-			width: 80%;
-			margin: auto;
-			margin-top: 3%;
-			padding: 6%;
+			background: lightgray;
+			position: fixed;
+			
 		}
 		#orange-block a{
 			text-decoration: none;
@@ -40,11 +58,22 @@
 </head>
 
 <body>
-	<h1><i>caliCoder</i></h1>
-	<h3><i>Roman Mirov's programming portfolio and web log.</i></h3>
-	<div id="orange-block">
-		<a href="https://thecalicoder.github.io/treeproducts">Solving "Tree Products," number sequence problem with for loops <span class="dates">— 8 May 2017 (1:59a)</span></a>
-		<a href="https://thecalicoder.github.io/learning-web-dev">Web development learning sequence, scroll to see the code become more advanced <span class="dates">— updated May 2017</span></a>
-	</div>
+	<aside>
+		<h1 id="site-title"><i>caliCoder</i></h1>
+		<h3 id="site-description"><i>Roman Mirov's programming portfolio and web log.</i></h3>
+	</aside>
+	<main>
+		<article id="orange-block">
+			<a href="https://thecalicoder.github.io/treeproducts">Solving "Tree Products," number sequence problem with for loops <span class="dates">— 8 May 2017 (1:59a)</span></a>
+			<a href="https://thecalicoder.github.io/learning-web-dev">Web development learning sequence, scroll to see the code become more advanced <span class="dates">— updated May 2017</span></a>
+		</article>
+	</main>
 </body>
 </html>
+
+
+
+
+
+
+
