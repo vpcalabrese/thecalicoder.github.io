@@ -4,61 +4,85 @@
 	<meta charset="UTF-8">
 	<title>caliCoder::Roman Mirov::computer programmer and engineer</title>
 	<style>
-		/** big elements of page
+		/** BIG page elements
 		----------------------------------------------------------------------------------------------------------*/
 		body{
 			background: url("https://thecalicoder.github.io/images/offices.jpg") no-repeat fixed center;
 			background-size: cover;
 			margin: 0;
 			font-family: "Open Sans", sans-serif;
+			font-size: 1vw;
 		}
 		aside{
-			background: rgba(0, 0, 0, 0.5);
 			float: left;
-			width: 20%;
+			width: 20vw;
 			height: 100vh;
 			overflow: scroll;
 		}
 		main{
 			float: right;
-			width: 80%;
+			width: 80vw;
 			height: 100vh;
 		}
 		main + *{
 			clear: both;
 		}
-		/** general elements
+		/** GENERAL elements
 		----------------------------------------------------------------------------------------------------------*/
-		h1, h2, h2{
+		h1, h2, h3{
 			font-family: 'Roboto', sans-serif;
-			text-align: center;
 		}
-		/** elements in aside
+		::-webkit-scrollbar{
+			display: none;
+		}
+		/** HEADER elements
 		----------------------------------------------------------------------------------------------------------*/
+		header{
+			background: rgba(150, 70, 0, 0.5);
+			height: 20vh;
+		}
 		#site-title{
 			color: white;
-			font-size: 48px;
-			margin-bottom: 0.5em;
-		}	
+			font-size: 2vw;
+		}
 		#site-description{
-			color: #999;
-			margin: 0 3vmin 0 3vmin;
+			color: #BBB;
+			font-size: 1.25vw;
+		}
+		/** ASIDE SECTION elements
+		----------------------------------------------------------------------------------------------------------*/
+		aside section{
+			background: rgba(0, 0, 0, 0.5);
+			height: 80vh;
+		}
+		nav{
+			
+		}
+		nav a{
+			text-decoration: none;
+			color: lightgray;
+			padding: 1vw;
+			margin-top: 2vw;
+		}
+		nav a:hover{
+			background-color: rgba(20, 20, 20, 0.2);
+			color: white;
 		}
 		/** elements in main
 		----------------------------------------------------------------------------------------------------------*/
-		#programs{
+		#program-links{
 			background: rgba(255, 255, 255, 0.75);
 			margin: 6vmin;
-			padding: 3vmin;
+			padding: 3vw;
 		}
-		#programs a{
+		#program-links a{
 			text-decoration: none;
 			color: #444;
 			display: inline-block;
 			line-height: 3vmax;
 			font-weight: 900;
 		}
-		#programs a:hover{
+		#program-links a:hover{
 			background-color: rgba(68, 68, 68, 0.1);
 			color: black;
 		}
@@ -71,13 +95,20 @@
 
 <body>
 	<aside>
-		<h1 id="site-title"><i>caliCoder</i></h1>
-		<h3 id="site-description"><i>Roman Mirov's programming portfolio and web log.</i></h3>
+		<header>
+			<h1 id="site-title"><i>caliCoder</i></h1>
+			<h3 id="site-description"><i>Roman Mirov's programming portfolio and web log.</i></h3>
+		</header>
+		<section id="lower">
+			<nav>
+				<a href="#programs">My program projects</a>
+			</nav>
+		</section>
 	</aside>
 	<main>
-		<article id="programs">
-			<a href="https://thecalicoder.github.io/treeproducts">Solving "Tree Products," number sequence problem with for loops</a><span class="dates"> — 8 May 2017 (1:59a)</span>
-			<a href="https://thecalicoder.github.io/learning-web-dev">Web development learning sequence, scroll to see the code become more advanced</a><span class="dates"> — updated May 2017</span>
+		<article id="program-links">
+			<div><a href="https://thecalicoder.github.io/treeproducts">Solving "Tree Products," number sequence problem with for loops</a><span class="dates"> — 8 May 2017 (1:59a)</span></div>
+			<div><a href="https://thecalicoder.github.io/learning-web-dev">Web development learning sequence, scroll to see the code become more advanced</a><span class="dates"> — updated May 2017</span></div>
 		</article>
 	</main>
 </body>
