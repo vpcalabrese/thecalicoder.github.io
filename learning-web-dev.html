@@ -4,15 +4,34 @@
 	<meta charset="UTF-8">
 	<title>Learning web development – Guide</title>
 	<style>
+		/* GENERAL elements
+		##################################################################################################################################*/
 		body{
 			margin: 0;
-			min-height: 150vh;
+			padding: 0;
 		}
-		#text-in-style{
-			color: darkred;
-			font-style: italic;
-			text-shadow:-2px 2px black; 
-			font-size: 2em;
+		code{
+			background-color: lightgray;
+			padding: 2px;
+		}
+		p{
+			line-height: 3vmin;
+		}
+		/* SPECIFIC elements
+		##################################################################################################################################*/
+		#init-no-style a{
+			all: initial;
+			cursor: auto;
+			text-decoration: underline;
+		}
+		#init-no-style a:link{
+			color: blue;
+		}
+		#init-no-style a:visited{
+			color: purple;
+		}
+		#init-no-style a:hover, #init-no-style a:active{
+			color: red;
 		}
 		#modern-text{
 			background: url('https://thecalicoder.github.io/images/manhattan.jpg') no-repeat fixed center;
@@ -32,26 +51,47 @@
 			display: block;
 			padding: 1vmin;
 		}
-		code{
-			background-color: lightgray;
-			padding: 2px;
-		}
-		p{
-			line-height: 3vmin;
-		}
 	</style>
 </head>
 
 <body>
-	<div class="marginalize">
-		<!--The first few elements are stripped from all style because your first html won't really implement css-->
-		<h1 style="all: initial; font-size: 2em; font-weight: bold; display: block; margin: 0.83em 0 0.83em 0;">Catchy Heading Tag</h1>
-		<h2 style="all: initial; font-size: 1.5em; font-weight: bold; display: block; margin: 0.67em 0 0.67em 0;">Some Extra Sub Heading</h2>
-		<p style="all: initial;">This webpage visualizes what you will learn, going into web development and html, in order as taught by sources like w3schools and freecodecamp, really any good web dev course online that teaches in order from beginner code to advanced programming, in a timeline fashion. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus quis arcu sed blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur in diam at condimentum. Duis tellus dolor, pharetra ac justo non, convallis viverra velit. Mauris vitae sem ipsum. Nullam ornare augue ac fringilla euismod. Proin iaculis non ipsum sagittis feugiat. Nunc dignissim ac mauris a efficitur. In erat urna, ornare id ipsum a, euismod pretium odio.<br>As you scroll down, the code will become more advanced and more concepts will be implemented with html, css, javascript, and maybe even php OR<sup>1</sup> ajax.<br><br><sup>1</sup> "OR" electronically meaning one of either or both, as you may see ajax and php scripting in a website. Err... electronics joke... </p>
-		<!--html comment passing by... (YT joke)-->
-		<p id="text-in-style">Text in style is style</p>
-		<p style="font-size: 2vmin; font-weight: bold; padding: 3vmax"><em>Note 1:</em> vw and vh are my new favorite units (resize your browser window)<p>
+	<!--This block is without styles because your first html will by styleless-->
+	<!--Remember, "display: block;" below is an example of why you usually want to manually set the default styles of an element after setting all styles to initial.-->
+	<div style="all: initial; display: block; margin: 8px;" id="init-no-style">
+		<h1 style="all: initial; font-size: 2em; font-weight: bold; display: block; margin: 0.67em 0 0.67em 0;">Heading one</h1>
+		<h2 style="all: initial; font-size: 1.5em; font-weight: bold; display: block; margin: 0.83em 0 0.83em 0;">Heading two</h2>
+		<h3 style="all: initial; font-size: 1.17em; font-weight: bold; display: block; margin: 1em 0 1em 0;">Heading three</h3>
+		<h4 style="all: initial; font-size: 1em; font-weight: bold; display: block; margin: 1.33em 0 1.33em 0;">Heading four</h4>
+		<h5 style="all: initial; font-size: 0.83em; font-weight: bold; display: block; margin: 1.67em 0 1.67em 0;">Heading five</h5>
+		<h6 style="all: initial; font-size: 0.67em; font-weight: bold; display: block; margin: 2.33em 0 2.33em 0;">Heading six</h6>
+		<p style="all: initial; display: block; margin: 1em 0 1em 0;">As you scroll down this webpage will show basic html to advanced html, like a timeline of what you will learn in web development. I will be following the order of teaching by W3schools and Freecodecamp. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisi ligula, maximus auctor justo vehicula sed. Phasellus efficitur ac arcu eu luctus. Cras nec ipsum purus. Maecenas sagittis ac magna luctus vulputate. Quisque at lectus id eros euismod dapibus sit amet sed quam. Vivamus rutrum lorem magna. Nulla sollicitudin ex tempus, ultrices orci vitae, porta tellus. Fusce in nulla vel nulla auctor cursus. Nulla posuere orci at diam maximus vulputate. Vestibulum tellus felis, pretium vel luctus sit amet, scelerisque sit amet sem. Maecenas rutrum enim orci, et suscipit nulla auctor eu. Fusce at sollicitudin velit, non luctus ipsum. Pellentesque lobortis arcu id dignissim interdum. Vestibulum scelerisque vel elit non semper. Pellentesque sodales nulla et lectus porttitor, et venenatis tellus cursus. Fusce blandit enim turpis, eu suscipit massa eleifend ut. Curabitur fringilla lorem id feugiat luctus.</p>
+		<!--html comment passing by... (YT comments joke)-->
+		<a href="https://thecalicoder.github.io">Anchor tag links webpages</a>&emsp;|&emsp;
+		<a href="#this-anchor" id="this-anchor">Or parts of a webpage</a>&emsp;|&emsp;
+		<a href="#this-anchor" id="this-anchor" target="_blank">Attribute to open in new tab</a>&emsp;|&emsp;
+		<a href="https://thecalicoder.github.io/images/manhattan.jpg" download>Download an file</a>
+		<img src="https://thecalicoder.github.io/images/manhattan.jpg" style="display: block;" alt="Come on, we all know images!" title="Come on, we all know images!" width="50%">
+		<p style="color: blue; background-color: red; display: inline-block; font: italic small-caps 700 125%/1.5em Verdana, Courier, Monospace;">Style your html. Usually with internal CSS, but style attribute works for small situations. </p>
+		<div><strong>You </strong><em>also </em><small>have </small><mark>all </mark><del>these </del><ins>formatting </ins><sub>elements </sub><sup>to use</sup></div>
+		
+		<p><b>Use q</b> element for short quotes <q>Lorem ipsum dolor sit amet.</q></p>
+		<p><b>Use blockquote</b> to cite a section quoted from another source</p>
+		<blockquote cite="http://www.lipsum.com/feed/html">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan a ex nec convallis. Mauris gravida ultrices est, a porta elit tempor congue. Donec blandit, mauris sit amet vulputate finibus, sapien lacus auctor magna, non maximus leo est et risus. Fusce mollis interdum nulla, ac aliquet orci porttitor at. Integer et sapien at libero varius elementum. Curabitur ornare, dolor quis elementum ornare, mauris risus rhoncus nunc, vitae viverra lorem urna quis felis.
+		</blockquote>
+		<p><b>Use</b> <abbr title="abbreviation or acronym element">abbr</abbr> to define... guess what!</p>
+		<p><b>Use address</b> tag for contact info like so:</p>
+		<address>
+		Lorem ipsum dolor sit amet<br> 
+		consectetur adipiscing elit:<br>
+		Sedconsequat.com<br>
+		Nisi ligula 564, Maximus<br>
+		Auctor
+		</address>
+		<p><b>Use cite</b> to cite work: <cite>Javascript</cite> by Brendan Eich. Created 1995.</p>
+		<bdo dir="rtl"><b>Use bdo</b> tag to override text direction.</bdo>
 	</div>
+	<hr>
 	
 	<div id="modern-text">This<br>is modern</div>
 	<div class="marginalize">
