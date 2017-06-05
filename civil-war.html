@@ -21,15 +21,15 @@
 </head>
 
 <body>
-  <div class="parallax-container">
+	<div style="background: #191919; color: lightblue; text-align: center;">
+		<small><b>Suggestion:</b> This website is best viewed on a 15 inch wide display. Thank you, now sit back and enjoy scrolling through <i>my website, 100% programmed by me!</i></small>
+	</div>
+	
+	<div id="forward" class="parallax-container">
  		<div id="parallax-div1">
  			<h1>Journey Through<br><strong>the Civil War</strong><br><h3>By Roman Mirov</h3></h1>
  		</div>
 		<div class="parallax"><img src="images/civil-war/civil-war.jpg" style="-webkit-filter: brightness(0.75); brightness(0.5);" alt="Civil War Image"></div>
-	</div>
-	
-	<div style="background: #191919; color: lightblue; text-align: center;">
-		<small><b>Suggestion:</b> This website is best viewed on a 15 inch wide display. Thank you, now sit back and enjoy scrolling through <i>my website, 100% programmed by me!</i></small>
 	</div>
 	
 	<div class="container">
@@ -59,7 +59,16 @@
 		</div>
 	</div>
 	
-	<div class="parallax-container">
+	<nav>
+		<ul>
+			<li><a href="#forward">The Civil War</a></li>
+			<li><a href="#battle">Battle of Chickamauga</a></li>
+			<li><a href="#perspective">Historical Perspective</a></li>
+			<li></li>
+		</ul>
+	</nav>
+	
+	<div id="battle" class="parallax-container">
 		<div>
 			<h2>Battle of<br>Chickamauga</h2>
 		</div>
@@ -107,7 +116,7 @@
  		</div>
 	</div>
 	
-	<div class="parallax-container">
+	<div id="perspective" class="parallax-container">
 		<div>
 			<h2>An Historical<br>Perspective</h2>
 		</div>
@@ -127,9 +136,22 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="materialize/js/materialize.js"></script>
-  <script src="materialize/js/init.js"></script>
-
-  </body>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('nav ul li a').on('click', function (e){
+				 e.preventDefault();
+				 var target = this.hash;
+				 var $target = $(target);
+				 $('html, body').stop().animate({
+					  'scrollTop': $target.offset().top
+				 }, 900, 'swing', function () {
+					  window.location.hash = target;
+				 });
+			});
+		});
+	</script>
+	<script src="materialize/js/materialize.js"></script>
+	<script src="materialize/js/init.js"></script>
+	</body>
 </html>

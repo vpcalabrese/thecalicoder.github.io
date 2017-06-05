@@ -42,7 +42,7 @@ table {
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%)
+	transform: translateX(-50%);
 }
 /* OVERRIDE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -92,6 +92,26 @@ figcaption{
 	height: 50vh;
 	border: 8px outset #654321;
 }
+nav{
+	display: block;
+	text-align: center;
+}
+nav ul{
+	font-weight: bold;
+	font-size: 1.25rem;
+	line-height: 2rem;
+	list-style-type: none;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #11F;
+}
+nav ul li a:hover{
+	background: #11F;
+	color: white;
+	padding: 0.25rem;
+}
+
 /* SCROLLBAR 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 html, body{
