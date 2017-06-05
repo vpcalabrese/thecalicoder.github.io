@@ -47,7 +47,7 @@ table {
 /* OVERRIDE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body{
-	font-size: 14px;
+	font-size: 15px;
 	font-family: 'PT Sans', sans-serif;
 	margin: 0;
 	padding: 0;
@@ -86,35 +86,29 @@ img{
 figcaption{
 	text-align: center;
 }
-
-html{
-	overflow: scroll;
+#longstreet{
+	background: url('https://www.civilwar.org/sites/default/files/styles/gallery_item/public/thumbnails/image/longstreet-charges-1_0.jpg?itok=d0m3ZKzT') no-repeat fixed center;
+	background-size: cover;
+	height: 50vh;
+	border: 8px outset #654321;
 }
-::-webkit-scrollbar {
-    width: 1%;
+/* SCROLLBAR 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html, body{
+	max-width: 100%;
+	overflow-x: hidden;
 }
- 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
- 
 body::-webkit-scrollbar {
-    width: 1em;
+	width: 0.5rem;
+	background: #DDD;
 }
- 
 body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
 }
- 
 body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
+  background-color: #222;
   outline: 1px solid slategrey;
 }
-::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-}
-
 
 
 
