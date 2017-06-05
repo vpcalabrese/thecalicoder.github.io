@@ -1,28 +1,123 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+/* MATERIALIZE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
+}
 
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+/* PARALLAX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.parallax-container {
+	position: relative;
+	overflow: hidden;
+	min-height: 500px;
+	width: 100vw;
+	color: white;
+}
+.parallax {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -10;
+}
+.parallax img {
+	display: none;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%)
+}
+/* OVERRIDE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body{
 	font-size: 14px;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5rem;
+	background: maroon;
 }
-.parallax-container{
-	width: 100vw;
-}
-#parallax-container1 {
-  height: 75vh;
-  color: rgba(255,255,255,.9);
-}
-#parallax-div1{
-	margin: 15rem auto;
-}
-h1{
+.container{
+	width: 100vw; 
+	padding: 3rem; 
+	margin: auto;
+	background: white;
+}	
+h1, h2, h3{
+	font-family: 'PT Serif', serif;
+	line-height: 150%;
 	text-align: center;
 }
-small, p{
-	font-family: 'Open Sans', sans-serif;
+h1{
+	font-size: 5rem;
+	margin: 12rem auto;
 }
+h2{
+	font-size: 4rem;
+	margin: 10rem auto;
+}
+h3{
+	font-size: 1.5rem;
+}
+strong{
+	line-height: 1.5rem;
+}
+img{
+	display: block;
+	margin: 0 auto;
+}
+figcaption{
+	text-align: center;
+}
+
+html{
+	overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 1%;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+
+
+
+
+
+
