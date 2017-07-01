@@ -33,6 +33,7 @@
 		#init-no-style a:hover, #init-no-style a:active{
 			color: red;
 		}
+		
 		#modern-text{
 			background: url('https://thecalicoder.github.io/images/manhattan.jpg') no-repeat fixed center;
 			background-size: cover;
@@ -43,13 +44,55 @@
 			line-height: 1em;
 			letter-spacing: 0.1em;
 		}
+		
 		.marginalize{
 			margin: 3vh 3vw 3vh 3vw;
 			padding-right: 30vmin;
 		}
+		
 		form fieldset > *{
 			display: block;
 			padding: 1vmin;
+		}
+		
+		#bordered-table, #bordered-table *{
+			border: 3px inset blue;
+		}
+		#collapsed-borders, #collapsed-borders *{
+			border: 3px outset green;
+			border-collapse: collapse;
+		}
+		#padded-cells th, #padded-cells td{
+			border: 2px outset green;
+			border-collapse: collapse;
+			padding: 1em;
+		}
+		#spaced-borders{
+			border: 1px inset gray;
+			border-spacing: 1em;
+		}
+		#spaced-borders *{
+			border: 1px inset gray;
+		}
+		#colspanned-table, #colspanned-table *{
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: center;
+		}
+		#rowspanned-table, #rowspanned-table *{
+			border: 3px solid black;
+			border-collapse: collapse;
+		}
+		#table-captioned, #table-captioned *{
+			border: 1px dashed gray;
+			border-collapse: collapse;
+		}
+		#organized-table, #organized-table *{
+			border: 1px solid red;
+			border-collapse: collapse;
+		}
+		#organized-table tbody{
+			border: 2px dashed blue;
 		}
 	</style>
 </head>
@@ -70,10 +113,12 @@
 		<a href="#this-anchor" id="this-anchor">Or parts of a webpage</a>&emsp;|&emsp;
 		<a href="#this-anchor" id="this-anchor" target="_blank">Attribute to open in new tab</a>&emsp;|&emsp;
 		<a href="https://thecalicoder.github.io/images/manhattan.jpg" download>Download an file</a>
-		<img src="https://thecalicoder.github.io/images/manhattan.jpg" style="display: block;" alt="Come on, we all know images!" title="Come on, we all know images!" width="50%">
+		<p>Img element with src, style, alt, and a title.</p>
+		<img src="images/medium-res.jpg" style="display: block; width: 33%;" alt="Come on, we all know images!" title="Come on, we all know images!">
 		<p style="color: blue; background-color: red; display: inline-block; font: italic small-caps 700 125%/1.5em Verdana, Courier, Monospace;">Style your html. Usually with internal CSS, but style attribute works for small situations. </p>
-		<div><strong>You </strong><em>also </em><small>have </small><mark>all </mark><del>these </del><ins>formatting </ins><sub>elements </sub><sup>to use</sup></div>
+		<hr>
 		
+		<div><strong>Strong </strong><em>emphasize </em><small>small </small><mark>mark </mark><del>delete </del><ins>insert </ins><sub>subscript </sub><sup>superscript</sup></div>
 		<p><b>Use q</b> element for short quotes <q>Lorem ipsum dolor sit amet.</q></p>
 		<p><b>Use blockquote</b> to cite a section quoted from another source</p>
 		<blockquote cite="http://www.lipsum.com/feed/html">
@@ -90,8 +135,190 @@
 		</address>
 		<p><b>Use cite</b> to cite work: <cite>Javascript</cite> by Brendan Eich. Created 1995.</p>
 		<bdo dir="rtl"><b>Use bdo</b> tag to override text direction.</bdo>
+		<hr>
+	
+		<!--Always 1) specify image size and 2) image size with style not with width/height attribute-->
+		<a href="https://thecalicoder.github.io" target="_blank">Use images as links<br><img src="images/lowest-res.jpg" alt="image in link" style="width: 15%;"></a>
+		<p><img src="images/lowest-res.jpg" alt="floated image" style="width: 15%; float: right;">You can also float images within a tag with text, etc. Also to line up elements by top put the image your floating, like this one to the right, <i>before</i> the text. I've gone further and used a div tag right after the image (inside the p) to clear the float, basically so that the image doesn't overlap onto the next content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan a ex nec convallis. Mauris gravida ultrices est, a porta elit tempor congue. Donec blandit, mauris sit amet vulputate finibus, sapien lacus auctor magna, non maximus leo est et risus. Fusce mollis interdum nulla, ac aliquet orci porttitor at. Integer et sapien at libero varius elementum. Curabitur ornare, dolor quis elementum ornare, mauris risus rhoncus nunc, vitae viverra lorem urna quis felis.</p>
+		<div style="clear: both;"></div>
+		<p>The map tag makes image-maps which are images with clickable areas. The usemap attribute in the image element links to the name attribute of the map element. Remember to give your image width (and height). The map contains area tags which define the clickable areas of the map. Click on some of the buildings to take a closer look at them (hint: one is empire state). </p>
+		<img src="images/medium-res.jpg" alt="new york image map" usemap="img-map-1" style="width: 512px; height: 300px;">
+		<map name="img-map-1">
+			<area shape="rect" coords="230,100,280,300" alt="Empire State" href="https://en.wikipedia.org/wiki/Empire_State_Building">
+			<area shape="rect" coords="70,0,120,60" alt="Trump World Tower" href="https://en.wikipedia.org/wiki/Trump_World_Tower">
+			<area shape="rect" coords="70,65,120,150" alt="Chrysler Building" href="https://en.wikipedia.org/wiki/Chrysler_Building">
+			<area shape="circle" coords="470,150,75,150" alt="40 Wall St" href="https://en.wikipedia.org/wiki/40_Wall_Street">
+		</map>
+		
+		<p>Tables with the table tag, table rows with tr tag, headers with th and data with td. A table with 100% width. </p>
+		<table style="width: 100%; text-align: left; margin-bottom: 1em;">
+			<tr>
+				<th>Table header</th>
+				<th>Table header</th>
+				<th>Table header</th>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+		</table>
+		<table style="width: 100%; text-align: left; margin-bottom: 1em;" id="bordered-table">
+			<tr>
+				<th>Tables</th>
+				<th>with</th>
+				<th>borders</th>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+		</table>
+		<table style="width: 100%; text-align: left; margin-bottom: 1em;" id="collapsed-borders">
+			<tr>
+				<th>Table</th>
+				<th>border</th>
+				<th>collapsed</th>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+		</table>
+		<table style="width: 100%; text-align: left; margin-bottom: 1em;" id="padded-cells">
+			<tr>
+				<th>Table</th>
+				<th>cell</th>
+				<th>padding</th>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+		</table>
+		<table style="width: 100%; text-align: left; margin-bottom: 1em;" id="spaced-borders">
+			<tr>
+				<th>Table</th>
+				<th>border</th>
+				<th>spacing</th>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+		</table>
+		<table style="width: 100%; text-align: left; margin-bottom: 1em;" id="colspanned-table">
+			<tr>
+				<th>Colspan</th>
+				<th colspan="2">attribute</th>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+		</table>
+		<table style="width: 100%; text-align: left; margin-bottom: 1em;" id="rowspanned-table">
+			<tr>
+				<th>Rowspan</th>
+				<td>Table data</td>
+			</tr>
+			<tr>
+				<th rowspan="2">attribute</th>
+				<td>Table data</td>
+			</tr>
+			<tr>
+				<td>Table data</td>
+			</tr>
+		</table>
+		<table style="width: 100%; text-align: left; margin-bottom: 1em;" id="table-captioned">
+			<caption>Table caption tag</caption>
+			<tr>
+				<th>Table heading</th>
+				<th>Table heading</th>
+				<th>Table heading</th>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+			<tr>
+				<td>Table data</td>
+				<td>Table data</td>
+				<td>Table data</td>
+			</tr>
+		</table>
+		<table style="width: 100%; text-align: left; margin-bottom: 1em;" id="organized-table">
+			<thead>
+				<tr>
+					<th>Table</th>
+					<th>head</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td>Table</td>
+					<td>foot</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>Table</td>
+					<td>body</td>
+				</tr>
+				<tr>
+					<td>Table</td>
+					<td>body</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<colgroup>
+				
+			</colgroup>
+			<tr>
+			
+			</tr>
+			<tr>
+			
+			</tr>
+		</table>
 	</div>
-	<hr>
 	
 	<div id="modern-text">This<br>is modern</div>
 	<div class="marginalize">
